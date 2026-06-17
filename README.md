@@ -95,9 +95,3 @@ Restart the Raycast development command after manifest or command changes.
 - Some legacy wiki links only contain a title. The extension resolves the best
   matching note before opening and falls back to candidate search if ambiguous.
 
-```sh
-npm run publish
-```
-
-That command opens a public Raycast Store review PR. Do not run it until the
-extension is intentionally ready for Store review.
