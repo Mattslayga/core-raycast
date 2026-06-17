@@ -43,7 +43,7 @@ tokens into GitHub issues, screenshots, pull requests, or logs.
 ## Local Setup
 
 ```sh
-git clone https://github.com/slaytek-systems/core-raycast.git
+git clone https://github.com/Mattslayga/core-raycast.git
 cd core-raycast
 bun install
 bun run dev
