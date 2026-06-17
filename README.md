@@ -94,28 +94,6 @@ Restart the Raycast development command after manifest or command changes.
   not silently forced through the API.
 - Some legacy wiki links only contain a title. The extension resolves the best
   matching note before opening and falls back to candidate search if ambiguous.
-- Store screenshots and public issues must not include private Core content.
-- Admin operations are intentionally out of scope for the first public version.
-- `npm audit` currently reports an upstream `esbuild` advisory through
-  `@raycast/api`. npm suggests downgrading Raycast API to fix it; do not do
-  that for Store prep without first checking current Raycast guidance.
-
-## Raycast Store Publishing
-
-Ordinary users should not run the publish script. It is for maintainers preparing
-a public Raycast Store PR.
-
-Before publishing:
-
-- Confirm the Raycast author/owner metadata.
-- Replace or approve the final 512x512 icon.
-- Capture sanitized screenshots.
-- Confirm npm lockfile freshness.
-- Run `npm test`, `npm run lint`, and `npm run build`.
-- Review `npm audit` and document any Raycast upstream/transitive advisories.
-- Confirm the minimum supported Core Edge server version.
-
-Publishing uses:
 
 ```sh
 npm run publish
