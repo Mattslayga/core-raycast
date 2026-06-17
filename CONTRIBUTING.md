@@ -25,6 +25,9 @@ For the Bun development loop:
 bun run validate:bun
 ```
 
+CI uses the npm validation path because Raycast Store review uses npm and
+`package-lock.json`. Bun remains supported for local development.
+
 ## UX Rules
 
 - Enter should perform the primary action for the current screen.
