@@ -1,0 +1,219 @@
+{
+  "name": "raycast-core",
+  "title": "Core Edge",
+  "description": "Keyboard-first access to Core Edge search, capture, tasks, links, and work context.",
+  "icon": "icon.png",
+  "author": "slayga",
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity",
+    "Developer Tools"
+  ],
+  "commands": [
+    {
+      "name": "search-core",
+      "title": "Search Core",
+      "subtitle": "Core Edge",
+      "description": "Search Core Edge notes using hybrid retrieval.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "search",
+        "notes",
+        "knowledge"
+      ]
+    },
+    {
+      "name": "explore-core",
+      "title": "Explore Core",
+      "subtitle": "Core Edge",
+      "description": "Find a Core Edge record and traverse its graph.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "explore",
+        "graph",
+        "links"
+      ]
+    },
+    {
+      "name": "quick-capture",
+      "title": "Quick Capture",
+      "subtitle": "Core Edge",
+      "description": "Capture a typed Core Edge record with tags and links.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "capture",
+        "create",
+        "record"
+      ]
+    },
+    {
+      "name": "link-records",
+      "title": "Link Records",
+      "subtitle": "Core Edge",
+      "description": "Create supported typed links between Core Edge records.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "link",
+        "graph",
+        "records"
+      ]
+    },
+    {
+      "name": "what-next",
+      "title": "What Next",
+      "subtitle": "Core Edge",
+      "description": "Show the next actionable Core Edge tasks.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "tasks",
+        "next",
+        "agenda"
+      ]
+    },
+    {
+      "name": "open-loops",
+      "title": "Open Loops",
+      "subtitle": "Core Edge",
+      "description": "Show Core Edge operational diagnostics and open-loop records.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "loops",
+        "diagnostics",
+        "tasks"
+      ]
+    },
+    {
+      "name": "agenda",
+      "title": "Agenda",
+      "subtitle": "Core Edge",
+      "description": "Show due and scheduled Core Edge tasks.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "agenda",
+        "today",
+        "tasks"
+      ]
+    },
+    {
+      "name": "recent",
+      "title": "Recent",
+      "subtitle": "Core Edge",
+      "description": "Show recently changed Core Edge records.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "recent",
+        "changes",
+        "activity"
+      ]
+    },
+    {
+      "name": "project-context",
+      "title": "Project Context",
+      "subtitle": "Core Edge",
+      "description": "Inspect a Core Edge project's tasks, blockers, and context notes.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "project",
+        "context",
+        "tasks"
+      ]
+    },
+    {
+      "name": "browse-records",
+      "title": "Browse Records",
+      "subtitle": "Core Edge",
+      "description": "Browse Core Edge records by type.",
+      "mode": "view",
+      "keywords": [
+        "core",
+        "browse",
+        "records",
+        "types"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "baseUrl",
+      "title": "Core Edge Base URL",
+      "description": "Base URL for the Core Edge server.",
+      "type": "textfield",
+      "required": true,
+      "default": "https://core-edge.up.railway.app",
+      "placeholder": "https://core-edge.up.railway.app"
+    },
+    {
+      "name": "apiToken",
+      "title": "Core Edge API Token",
+      "description": "Core Edge bearer token used for read-only API calls.",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "namespace",
+      "title": "Namespace",
+      "description": "Optional namespace override. Leave blank to use the token default.",
+      "type": "textfield",
+      "required": false,
+      "placeholder": "default"
+    },
+    {
+      "name": "resultLimit",
+      "title": "Result Limit",
+      "description": "Maximum number of search results to show.",
+      "type": "dropdown",
+      "required": true,
+      "default": "10",
+      "data": [
+        {
+          "title": "5",
+          "value": "5"
+        },
+        {
+          "title": "10",
+          "value": "10"
+        },
+        {
+          "title": "20",
+          "value": "20"
+        }
+      ]
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "validate": "bun run typecheck && bun run test && bun run lint && bun run build"
+  },
+  "dependencies": {
+    "@raycast/api": "^1.104.19",
+    "react": "^19.2.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/bun": "latest",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.7",
+    "eslint": "^9.39.1",
+    "prettier": "^3.7.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.0.16"
+  }
+}
