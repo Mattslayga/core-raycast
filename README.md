@@ -181,6 +181,9 @@ npm run build
   matching note before opening and falls back to candidate search if ambiguous.
 - Store screenshots and public issues must not include private Core content.
 - Admin operations are intentionally out of scope for the first public version.
+- `npm audit` currently reports upstream `esbuild` advisories through
+  `@raycast/api`. Do not use `npm audit fix --force` without checking current
+  Raycast guidance, because npm suggests downgrading the Raycast API package.
 
 ## Support
 
