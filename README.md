@@ -181,9 +181,6 @@ npm run build
   matching note before opening and falls back to candidate search if ambiguous.
 - Store screenshots and public issues must not include private Core content.
 - Admin operations are intentionally out of scope for the first public version.
-- `npm audit` currently reports an upstream `esbuild` advisory through
-  `@raycast/api`. npm suggests downgrading Raycast API to fix it; do not do
-  that for Store prep without first checking current Raycast guidance.
 
 ## Support
 
@@ -199,26 +196,9 @@ Use GitHub issues for reproducible bugs and focused feature requests. Include:
 Do not include private Core record content, raw API tokens, full server responses
 with private data, or screenshots of Raycast preferences.
 
-## Raycast Store Publishing
+## Store Readiness
 
-Ordinary users should not run the publish script. It is for maintainers preparing
-a public Raycast Store PR.
-
-Before publishing:
-
-- Confirm the Raycast author/owner metadata.
-- Replace or approve the final 512x512 icon.
-- Capture sanitized screenshots.
-- Confirm npm lockfile freshness.
-- Run `npm test`, `npm run lint`, and `npm run build`.
-- Review `npm audit` and document any Raycast upstream/transitive advisories.
-- Confirm the minimum supported Core Edge server version.
-
-Publishing uses:
-
-```sh
-npm run publish
-```
-
-That command opens a public Raycast Store review PR. Do not run it until the
-extension is intentionally ready for Store review.
+This repository is ready for technical users to run locally in Raycast
+development mode. Public Raycast Store submission is a later maintainer action
+after beta feedback, sanitized screenshots, metadata review, and Core Edge API
+compatibility confirmation.
