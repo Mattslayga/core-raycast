@@ -5,6 +5,23 @@
   "icon": "icon.png",
   "author": "slayga",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattslayga/core-raycast.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mattslayga/core-raycast/issues"
+  },
+  "homepage": "https://github.com/Mattslayga/core-raycast#readme",
+  "keywords": [
+    "core-edge",
+    "raycast",
+    "knowledge",
+    "tasks",
+    "capture",
+    "search",
+    "productivity"
+  ],
   "platforms": [
     "macOS"
   ],
@@ -200,7 +217,9 @@
     "publish": "npx @raycast/api@latest publish",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "validate": "bun run typecheck && bun run test && bun run lint && bun run build"
+    "validate": "npm run validate:npm",
+    "validate:bun": "bun run typecheck && bun run test && bun run lint && bun run build",
+    "validate:npm": "npm run typecheck && npm test && npm run lint && npm run build"
   },
   "dependencies": {
     "@raycast/api": "^1.104.19",

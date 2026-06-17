@@ -16,19 +16,13 @@ bun run dev
 Run the full local gate before opening a PR:
 
 ```sh
-bun run typecheck
-bun run test
-bun run lint
-bun run build
+npm run validate
 ```
 
-For npm/Raycast Store compatibility:
+For the Bun development loop:
 
 ```sh
-npm install
-npm test
-npm run lint
-npm run build
+bun run validate:bun
 ```
 
 ## UX Rules
@@ -45,3 +39,9 @@ npm run build
 - README or changelog updated for user-visible changes.
 - Known limitations updated when backend support is partial.
 - Validation commands recorded in the PR.
+
+## Issue Hygiene
+
+- Use the bug or feature request templates.
+- Report vulnerabilities privately through GitHub security advisories.
+- If a token is exposed anywhere during a report, revoke it before continuing.

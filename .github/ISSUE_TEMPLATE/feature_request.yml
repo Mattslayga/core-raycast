@@ -1,0 +1,44 @@
+name: Feature request
+description: Suggest a focused addition to the Core Edge Raycast extension.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep requests focused on the Raycast extension. Admin-only Core Edge operations are intentionally out of scope for the first public version.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Search and read
+        - Capture
+        - Links and graph traversal
+        - Tasks and agenda
+        - Project context
+        - Setup and onboarding
+        - Raycast Store readiness
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What daily Core workflow is currently too slow or impossible from Raycast?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What should the extension do?
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints or notes
+      description: Include token-role, API-shape, or privacy constraints if relevant.
