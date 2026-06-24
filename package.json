@@ -233,6 +233,6 @@
     "eslint": "^9.39.1",
     "prettier": "^3.7.4",
     "typescript": "^6.0.3",
-    "vitest": "^4.0.16"
+    "vitest": "^4.1.9"
   }
 }
