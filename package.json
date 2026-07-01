@@ -230,7 +230,7 @@
     "@types/bun": "latest",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.7",
-    "eslint": "^9.39.1",
+    "eslint": "^10.6.0",
     "prettier": "^3.7.4",
     "typescript": "^6.0.3",
     "vitest": "^4.0.16"
